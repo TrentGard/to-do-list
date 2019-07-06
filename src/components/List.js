@@ -1,9 +1,9 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-function List({ items, handleChange }) {
+function List({ items, handleChange }, props) {
   return (
-    <div>
+    <div className="container flex justify-content-center">
       <br />
       <ul>
         {items.map(item => {
@@ -11,9 +11,9 @@ function List({ items, handleChange }) {
             <div>
               <ListItem
                 item={item}
-                key={item.id}
                 checked={item.checked}
                 handleChange={handleChange}
+                id={item.id}
               />
             </div>
           );

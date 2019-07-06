@@ -2,11 +2,17 @@ import React from "react";
 
 function Title() {
   return (
-    <div>
-      <h3 className="container col-md-3 alert alert-primary flex-center">
-        Simple To Do List
-      </h3>
-      <small>Add And Delete Items Below!</small>
+    <div className="container">
+      <div className="container flex row justify-content-center">
+        <h3 className="justify-content-center alert alert-primary">
+          Simple To Do List
+        </h3>
+      </div>
+      <div className="container flex row justify-content-center">
+        <small className="justify-content-center">
+          Add And Delete Items Below!
+        </small>
+      </div>
     </div>
   );
 }

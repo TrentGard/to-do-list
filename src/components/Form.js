@@ -16,10 +16,10 @@ function Form(props) {
       <Button
         text="Add"
         onClick={props.handleSubmit}
-        className="p-2 m-2 alert alert-success m3"
+        className="p-2 m-2 alert alert-success"
       />
       <Button
-        className="p-2 m-2 alert alert-danger m3"
+        className="p-2 m-2 alert alert-danger"
         text="Delete"
         onClick={props.handleDelete}
       />
