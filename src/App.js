@@ -1,26 +1,25 @@
-import React from 'react';
-import './App.css';
-import Title from './components/Title';
-import Form from './components/Form';
-import List from './components/List';
+import React from "react";
+import "./App.css";
+import Title from "./components/Title";
+import Form from "./components/Form";
+import List from "./components/List";
 
 class App extends React.Component {
-
   state = {
-    text: '',
+    text: "",
     items: []
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ text: e.target.value });
-  }
+  };
 
   handleDelete = items => {
     this.setState(state => {
       const items = state.items.filter(item => !item.checked);
-      return { items }
+      return { items };
     });
-  }
+  };
 
   handleCheck = id => {
     this.setState(state => {
@@ -29,20 +28,20 @@ class App extends React.Component {
         // find item we clicked on
         if (id === item.id) {
           // for the one we clicked on return a new (copy of) object with checked field to prevent mutation
-          return { ...item, checked: !item.checked }
+          return { ...item, checked: !item.checked };
         }
         // we hit here if this item is not one clicked on to return the item unchanged
-        return item
-      })
+        return item;
+      });
       // we set the items in our state equal to our new array of items
-      return { items }
-    })
-  }
+      return { items };
+    });
+  };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     if (!this.state.text.length) {
-      return
+      return;
     }
     const newItem = {
       text: this.state.text,
@@ -51,19 +50,24 @@ class App extends React.Component {
     };
     this.setState(state => ({
       items: state.items.concat(newItem),
-      text: ''
-    }))
-  }
+      text: ""
+    }));
+  };
 
   render() {
     return (
-      <div>
+      <div className="App p-5">
         <Title />
         <List items={this.state.items} handleChange={this.handleCheck} />
-        <Form userInput={this.state.text} handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleDelete={this.handleDelete} />
+        <Form
+          userInput={this.state.text}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
-};
+}
 
 export default App;

@@ -1,15 +1,26 @@
-import React from 'react';
-import ListItem from './ListItem';
+import React from "react";
+import ListItem from "./ListItem";
 
 function List({ items, handleChange }) {
-
-    return (
-        <ul>
-            {items.map(item => {
-                return <ListItem item={item} key={item.id} checked={item.checked} handleChange={handleChange} />
-            })}
-        </ul>
-    )
+  return (
+    <div>
+      <br />
+      <ul>
+        {items.map(item => {
+          return (
+            <div>
+              <ListItem
+                item={item}
+                key={item.id}
+                checked={item.checked}
+                handleChange={handleChange}
+              />
+            </div>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default List;
