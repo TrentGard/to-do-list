@@ -4,11 +4,11 @@ import Button from "./Button";
 function Form(props) {
   return (
     <form
-      className="p-2 m-2 d-flex justify-content-center"
+      className="d-flex justify-content-center"
       onSubmit={props.handleSubmit}
     >
       <input
-        className="row p-2 m-2 d-flex justify-content-center"
+        className="row p-2 m-2"
         type="text"
         value={props.userInput}
         onChange={props.handleChange}

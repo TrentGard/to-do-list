@@ -1,11 +1,11 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-function List({ items, handleChange }, props) {
+function List({ items, handleChange }) {
   return (
-    <div className="container flex justify-content-center">
+    <div className="row justify-content-center">
       <br />
-      <ul>
+      <ul className="col-auto">
         {items.map(item => {
           return (
             <div>

@@ -3,8 +3,8 @@ import Checkbox from "./Checkbox";
 
 function ListItem(props) {
   return (
-    <div className="row flex container justify-content-center">
-      <li className="justify-content-center alert alert-warning">
+    <div>
+      <li className="alert alert-warning">
         <span>
           {props.item.text}
           <Checkbox
@@ -14,7 +14,6 @@ function ListItem(props) {
           />
         </span>
       </li>
-      <br />
     </div>
   );
 }
