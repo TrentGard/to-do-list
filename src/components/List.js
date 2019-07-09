@@ -8,14 +8,13 @@ function List({ items, handleChange }) {
       <ul className="col-auto">
         {items.map(item => {
           return (
-            <div>
-              <ListItem
-                item={item}
-                checked={item.checked}
-                handleChange={handleChange}
-                id={item.id}
-              />
-            </div>
+            <ListItem
+              item={item}
+              checked={item.checked}
+              handleChange={handleChange}
+              id={item.id}
+              key={item.id}
+            />
           );
         })}
       </ul>

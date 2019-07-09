@@ -50,7 +50,7 @@ class App extends React.Component {
     };
 
     this.setState(state => ({
-      items: state.items.concat(newItem),
+      items: [...state.items, newItem],
       text: ""
     }));
   };
