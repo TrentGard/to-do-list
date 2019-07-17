@@ -14,11 +14,13 @@ function Form(props) {
         onChange={props.handleChange}
       />
       <Button
+        type="submit"
         text="Add"
         onClick={props.handleSubmit}
         className="p-2 m-2 alert alert-success"
       />
       <Button
+        type="button"
         className="p-2 m-2 alert alert-danger"
         text="Delete"
         onClick={props.handleDelete}

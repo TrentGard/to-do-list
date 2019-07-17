@@ -48,7 +48,6 @@ class App extends React.Component {
       id: Date.now(),
       checked: false
     };
-
     this.setState(state => ({
       items: [...state.items, newItem],
       text: ""
